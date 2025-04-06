@@ -139,8 +139,10 @@ namespace BetterSkillXP
                 if (!Settings.settings.enableCooking) return;
 
                 if (__instance.GetCookingState() != CookingPotItem.CookingState.Ready) return;
+                if (__instance?.m_GearItemBeingCooked?.m_Cookable?.m_CookedPrefab == null) return;
+
                 GearItem gi = __instance.m_GearItemBeingCooked.m_Cookable.m_CookedPrefab;
-                if (gi == null) return;
+
 
                 float cookingTime = __instance.ModifiedCookTimeMinutes()/60;
 
