@@ -153,7 +153,6 @@ namespace BetterSkillXP
                     recipeLvl = recipe.RequiredSkillLevel;
                     cookingTime += recipe.m_DishBlueprint.m_DurationMinutes/60;
                     cookingTime *= (1 + ((Settings.settings.cookingBonus / 100) * recipeLvl));
-                    MelonLogger.Msg(recipeLvl);
                 }
 
 
@@ -187,7 +186,6 @@ namespace BetterSkillXP
 
                 startingFireEndTime = GameManager.GetTimeOfDayComponent().GetHoursPlayedNotPaused();
                 accumulatedStartingFireTime += startingFireEndTime - startingFireStartTime;
-                MelonLogger.Msg(startingFireEndTime - startingFireStartTime);
                 accumulatedStartingFireTime = Main.MaybeIncrementPoints(accumulatedStartingFireTime, SkillType.Firestarting);
                 Main.SaveParameters();
             }

@@ -69,7 +69,7 @@ namespace BetterSkillXP
 
             if (skillType == SkillType.Cooking) hoursPerPoints = Settings.settings.cookingHours;
             else if (skillType == SkillType.ClothingRepair) hoursPerPoints = Settings.settings.mendingHours;
-            else if (skillType == SkillType.Firestarting) hoursPerPoints = Settings.settings.fireStartingMinutes/60;
+            else if (skillType == SkillType.Firestarting) hoursPerPoints = (float)Settings.settings.fireStartingMinutes/60;
             else if (skillType == SkillType.Gunsmithing) hoursPerPoints = Settings.settings.gunsmithingHours;
 
             float result = 0;
