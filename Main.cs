@@ -61,7 +61,6 @@ namespace BetterSkillXP
                 dataManager.Save($"{Patches.accumulatedMendingTime};{Patches.accumulatedCookingTime};{Patches.accumulatedStartingFireTime};{Patches.accumulatedGunsmithingTime}");
             }
         }
-                            
 
         public static float MaybeIncrementPoints(float accumulatedTime, SkillType skillType)
         {
