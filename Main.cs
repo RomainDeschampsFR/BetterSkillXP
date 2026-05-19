@@ -21,12 +21,13 @@ namespace BetterSkillXP
 
         public override void OnSceneWasInitialized(int buildIndex, string sceneName)
         {
+            MelonLogger.Msg(sceneName);
             if (GameManager.IsMainMenuActive())
             {
                 dataLoaded = false;
             }
 
-            if (!GameManager.IsBootSceneActive() && !GameManager.IsMainMenuActive() && !GameManager.IsEmptySceneActive() && !dataLoaded)
+            if (!GameManager.IsMainMenuActive() && !GameManager.IsEmptySceneActive() && !dataLoaded)
             {
                 MelonCoroutines.Start(LoadParameters());
             }
